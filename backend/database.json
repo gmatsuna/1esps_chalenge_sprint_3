@@ -1,0 +1,10 @@
+[
+    {
+        "passos": 500,
+        "academia": true,
+        "alimentacao": true,
+        "hidratacao": true,
+        "sono": true,
+        "pontos": 145
+    }
+]

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>CareQuest</title>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+  <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
+
+    <h1 class="text-3xl font-bold text-center text-blue-600 mb-6">
+      CareQuest
+    </h1>
+
+    <form id="formRegistro" class="space-y-4">
+
+      <div>
+        <label class="block mb-1 font-semibold">
+          Passos
+        </label>
+
+        <input
+          type="number"
+          id="passos"
+          class="w-full border rounded-lg p-2"
+          required
+        >
+      </div>
+
+      <div class="flex items-center gap-2">
+        <input type="checkbox" id="academia">
+        <label>Foi à academia</label>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <input type="checkbox" id="alimentacao">
+        <label>Alimentação saudável</label>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <input type="checkbox" id="hidratacao">
+        <label>Boa hidratação</label>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <input type="checkbox" id="sono">
+        <label>Dormiu bem</label>
+      </div>
+
+      <button
+        type="submit"
+        class="w-full bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-lg transition"
+      >
+        Registrar
+      </button>
+
+    </form>
+
+    <div id="mensagem" class="mt-4 text-center"></div>
+
+  </div>
+
+  <script src="./script.js"></script>
+
+</body>
+</html>
