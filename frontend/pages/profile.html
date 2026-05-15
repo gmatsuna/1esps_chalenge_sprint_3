@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Seu perfil e configurações no CareQuest.">
+    <meta name="theme-color" content="#1C9770">
+    <title>CareQuest – Perfil</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link href="https://cdn.lineicons.com/5.1/line/lineicons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/profile.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+    <div class="app-shell">
+
+        <header class="profile__header" role="banner">
+            <div class="profile__top">
+                <h1>Perfil</h1>
+                <a href="./settings.html" aria-label="Configurações">
+                    <i class="lni lni-gear-1" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <div class="profile__identity">
+                <div class="profile__avatar" aria-hidden="true">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="profile__name">
+                    <h2>Fábio Alexandre</h2>
+                    <p>Explorador Equilibrado</p>
+                </div>
+            </div>
+
+            <div class="profile__stats">
+                <div class="profile__stat-card">
+                    <p>Nível</p>
+                    <strong>2</strong>
+                </div>
+                <div class="profile__stat-card">
+                    <p>Streak</p>
+                    <strong>7 dias</strong>
+                </div>
+            </div>
+        </header>
+
+        <main id="main-content" class="profile__main">
+
+            <nav class="profile__menu" aria-label="Atalhos do perfil">
+                <a href="./notifications.html" class="profile__menu-item">
+                    <span class="profile__menu-content">
+                        <span class="profile__menu-icon" aria-hidden="true">
+                            <i class="fa-regular fa-bell"></i>
+                        </span>
+                        <span>Notificações</span>
+                    </span>
+                    <i class="lni lni-angle-double-right arrow" aria-hidden="true"></i>
+                </a>
+                <a href="./settings.html" class="profile__menu-item">
+                    <span class="profile__menu-content">
+                        <span class="profile__menu-icon profile__menu-icon--gray" aria-hidden="true">
+                            <i class="lni lni-gear-1"></i>
+                        </span>
+                        <span>Configurações</span>
+                    </span>
+                    <i class="lni lni-angle-double-right arrow" aria-hidden="true"></i>
+                </a>
+                <a href="./help.html" class="profile__menu-item">
+                    <span class="profile__menu-content">
+                        <span class="profile__menu-icon profile__menu-icon--gray" aria-hidden="true">
+                            <i class="lni lni-question-circle"></i>
+                        </span>
+                        <span>Ajuda &amp; Suporte</span>
+                    </span>
+                    <i class="lni lni-angle-double-right arrow" aria-hidden="true"></i>
+                </a>
+            </nav>
+
+            <a href="../index.html" class="profile__exit">
+                <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i>
+                <span>Sair da conta</span>
+            </a>
+        </main>
+
+        <nav class="bottom-nav" aria-label="Navegação principal">
+            <a href="./missions.html" class="bottom-nav__item">
+                <i class="lni lni-home-2" aria-hidden="true"></i>
+                <span>Início</span>
+            </a>
+            <a href="./wallet.html" class="bottom-nav__item">
+                <i class="lni lni-wallet-1" aria-hidden="true"></i>
+                <span>Carteira</span>
+            </a>
+            <a href="./profile.html" class="bottom-nav__item bottom-nav__item--active" aria-current="page">
+                <i class="lni lni-user-4" aria-hidden="true"></i>
+                <span>Perfil</span>
+            </a>
+        </nav>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+</body>
+</html>

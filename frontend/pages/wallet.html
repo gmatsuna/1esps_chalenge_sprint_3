@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sua carteira CareQuest – pontos, XP e recompensas.">
+    <meta name="theme-color" content="#1C9770">
+    <title>CareQuest – Carteira</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link href="https://cdn.lineicons.com/5.1/line/lineicons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/wallet.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+    <div class="app-shell">
+
+        <header class="wallet__header" role="banner">
+            <h1 class="wallet__title">Carteira CareQuest</h1>
+
+            <section class="wallet__balance-card" aria-label="Saldo da carteira">
+                <div class="wallet__balance-row">
+                    <p>SALDO ATUAL</p>
+                    <div class="wallet__balance-amount">
+                        <i class="fa-solid fa-coins" aria-hidden="true"></i>
+                        <h2>245 <span>pts</span></h2>
+                    </div>
+                </div>
+                <div class="wallet__xp-row">
+                    <p>XP Total acumulado</p>
+                    <strong>1350 XP</strong>
+                </div>
+            </section>
+
+            <nav class="wallet__tabs" role="tablist" aria-label="Seções da carteira">
+                <a href="#destaques" class="wallet__tab wallet__tab--active" role="tab" aria-selected="true">Recompensas</a>
+                <a href="#historico" class="wallet__tab" role="tab" aria-selected="false">Histórico</a>
+            </nav>
+        </header>
+
+        <main id="main-content" class="wallet__main">
+            <div class="wallet__main-title" id="destaques">
+                <h2>Destaques para você</h2>
+                <a href="./catalog.html" class="wallet__see-all">
+                    Ver tudo
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <ul class="wallet__cards">
+                <li class="reward-card">
+                    <div class="reward-card__logo reward-card__logo--gray" aria-hidden="true">
+                        <i class="fa-solid fa-headphones"></i>
+                    </div>
+                    <div class="reward-card__body">
+                        <div class="reward-card__info">
+                            <h3>1 Mês Premium Headspace</h3>
+                            <p>Headspace</p>
+                        </div>
+                        <div class="reward-card__action">
+                            <span class="reward-card__price reward-card__price--locked">
+                                <i class="lni lni-locked-2" aria-hidden="true"></i> 500 pts
+                            </span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="reward-card">
+                    <div class="reward-card__logo" aria-hidden="true">
+                        <i class="fa-solid fa-shoe-prints"></i>
+                    </div>
+                    <div class="reward-card__body">
+                        <div class="reward-card__info">
+                            <h3>Desconto em Tênis</h3>
+                            <p>Centauro</p>
+                        </div>
+                        <div class="reward-card__action">
+                            <span class="reward-card__price">200 pts</span>
+                            <a class="reward-card__redeem" href="./catalog.html#popup">Resgatar</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="reward-card">
+                    <div class="reward-card__logo" aria-hidden="true">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+                    <div class="reward-card__body">
+                        <div class="reward-card__info">
+                            <h3>E-book de Receitas</h3>
+                            <p>CarePlus</p>
+                        </div>
+                        <div class="reward-card__action">
+                            <span class="reward-card__price">100 pts</span>
+                            <a class="reward-card__redeem" href="./catalog.html#popup">Resgatar</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </main>
+
+        <nav class="bottom-nav" aria-label="Navegação principal">
+            <a href="./missions.html" class="bottom-nav__item">
+                <i class="lni lni-home-2" aria-hidden="true"></i>
+                <span>Início</span>
+            </a>
+            <a href="./wallet.html" class="bottom-nav__item bottom-nav__item--active" aria-current="page">
+                <i class="lni lni-wallet-1" aria-hidden="true"></i>
+                <span>Carteira</span>
+            </a>
+            <a href="./profile.html" class="bottom-nav__item">
+                <i class="lni lni-user-4" aria-hidden="true"></i>
+                <span>Perfil</span>
+            </a>
+        </nav>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+</body>
+</html>

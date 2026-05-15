@@ -1,0 +1,94 @@
+/* =============================================================
+   Splash (index.html) – tela inicial verde com mascote.
+   ============================================================= */
+
+@import url("./main.css");
+
+.splash {
+    background-color: var(--color-primary);
+    color: var(--color-text-on-primary);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    gap: 2.5rem;
+    min-height: 100vh;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .splash {
+        padding: 4rem 3rem;
+        gap: 3rem;
+    }
+}
+
+.splash__circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: var(--color-primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+    flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    .splash__circle {
+        width: 240px;
+        height: 240px;
+    }
+}
+
+.splash__circle img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+    .splash__circle img { width: 168px; height: 168px; }
+}
+
+.splash__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 480px;
+}
+
+.splash__text h1 {
+    font-size: var(--fs-2xl);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+    .splash__text h1 { font-size: 2.5rem; }
+}
+
+.splash__text .brand-by {
+    font-size: var(--fs-md);
+    font-weight: 500;
+    opacity: 0.9;
+    letter-spacing: 1.5px;
+}
+
+.splash__tagline {
+    font-size: var(--fs-lg);
+    font-weight: 400;
+    margin-top: 0.25rem;
+    opacity: 0.95;
+}
+
+.splash__cta {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+}

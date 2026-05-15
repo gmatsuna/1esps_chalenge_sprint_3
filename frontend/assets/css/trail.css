@@ -1,0 +1,113 @@
+/* =============================================================
+   Trail (trail.html) – escolha de até 2 trilhas.
+   ============================================================= */
+
+@import url("./main.css");
+
+.trail {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem 2.5rem;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .trail { padding: 3rem 3rem 3.5rem; gap: 2rem; }
+}
+
+.trail__intro h1 {
+    font-size: var(--fs-xl);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.trail__intro p {
+    font-size: var(--fs-base);
+    color: var(--color-text-muted);
+}
+
+.trail__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+}
+
+.trail__option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background-color: var(--color-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    border: 2px solid transparent;
+    cursor: pointer;
+    min-height: 88px;
+    transition: border-color 0.2s ease;
+}
+
+.trail__option:hover { border-color: var(--color-accent-1); }
+
+.trail__option:has(input:checked) {
+    border-color: var(--color-primary);
+    background-color: #F0FBF6;
+}
+
+.trail__option-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.trail__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.trail__icon--moon  { background-color: var(--color-info-bg);    color: var(--color-info); }
+.trail__icon--body  { background-color: var(--color-success-bg); color: var(--color-success); }
+.trail__icon--brain { background-color: var(--color-purple-bg);  color: var(--color-purple); }
+.trail__icon--food  { background-color: var(--color-warning-bg); color: var(--color-warning); }
+
+.trail__option h2 {
+    font-size: var(--fs-base);
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0;
+}
+
+.trail__option p {
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+    margin-top: 4px;
+}
+
+.trail__option input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    accent-color: var(--color-primary);
+    cursor: pointer;
+}
+
+.trail__counter {
+    text-align: center;
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+}
+
+.trail__cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}

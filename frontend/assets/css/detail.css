@@ -1,0 +1,132 @@
+/* =============================================================
+   Detail (detail.html) – detalhe de uma missão.
+   ============================================================= */
+
+@import url("./main.css");
+
+.detail {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem 1.5rem 2.5rem;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .detail {
+        padding: 1.5rem 3rem 3rem;
+        gap: 2rem;
+        max-width: 640px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+.detail__chips {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.detail__title h1 {
+    font-size: var(--fs-2xl);
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.detail__title p {
+    font-size: var(--fs-base);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.detail__title p:last-child { margin-bottom: 0; }
+
+.detail__reward-card {
+    background-color: #E8F4F2;
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.detail__reward-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.detail__reward-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: var(--color-success-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-success);
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.detail__reward-text p {
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    color: var(--color-text-muted);
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+}
+
+.detail__reward-values {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text);
+    font-weight: 700;
+    font-size: var(--fs-sm);
+}
+
+.detail__progress {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.detail__progress-bar {
+    width: 100%;
+    height: 12px;
+    background-color: var(--color-surface);
+    border-radius: var(--radius-pill);
+    overflow: hidden;
+}
+
+.detail__progress-bar > span {
+    display: block;
+    width: 33%;
+    height: 100%;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-pill);
+}
+
+.detail__progress-label {
+    text-align: center;
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+}
+
+.detail__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .detail__actions { margin-top: 2rem; }
+}

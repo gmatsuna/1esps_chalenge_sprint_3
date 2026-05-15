@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detalhe da missão de hoje no CareQuest.">
+    <meta name="theme-color" content="#1C9770">
+    <title>CareQuest – Detalhe da Missão</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link href="https://cdn.lineicons.com/5.1/line/lineicons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/detail.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+    <div class="app-shell">
+        <header class="page-header" style="padding: 1.25rem;">
+            <a href="./missions.html" class="page-header__back" aria-label="Voltar para missões">
+                <i class="lni lni-chevron-left" aria-hidden="true"></i>
+            </a>
+            <h1 class="page-header__title">Detalhe da Missão</h1>
+        </header>
+
+        <main id="main-content" class="detail">
+
+            <div class="detail__chips">
+                <span class="chip" id="missao-tipo"></span>
+                <span class="chip" id="missao-categoria"></span>
+            </div>
+
+            <section class="detail__title">
+                <h1 id="missao-titulo"></h1>
+                <p id="missao-descricao"></p>
+            </section>
+
+            <section class="detail__reward-card" aria-label="Recompensas da missão">
+                <div class="detail__reward-header">
+                    <div class="detail__reward-icon" aria-hidden="true">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <div class="detail__reward-text">
+                        <p>RECOMPENSAS</p>
+                        <div class="detail__reward-values">
+                            <span id="missao-xp"></span>
+
+                            <span aria-hidden="true">•</span>
+                            <span id="missao-pontos"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail__progress">
+                    <div class="detail__progress-bar"
+                         role="progressbar"
+                         aria-valuenow="33"
+                         aria-valuemin="0"
+                         aria-valuemax="100"
+                         aria-label="Progresso simulado">
+                        <span></span>
+                    </div>
+                    <p class="detail__progress-label">Progresso simulado</p>
+                </div>
+            </section>
+
+            <div class="detail__actions">
+                <a class="btn-primary-cta" href="./accomplished.html">Marcar como concluída</a>
+                <a class="btn-primary-cta--secondary" href="./missions.html">Não consegui fazer hoje</a>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+    <script src="../assets/js/detail.js"></script>
+</body>
+</html>

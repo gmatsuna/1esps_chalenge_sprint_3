@@ -1,0 +1,85 @@
+/* =============================================================
+   Welcome (welcome.html) – boas-vindas com mascote.
+   ============================================================= */
+
+@import url("./main.css");
+
+.welcome {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    gap: 2.5rem;
+    text-align: center;
+    min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+    .welcome { padding: 4rem 3rem; gap: 3rem; }
+}
+
+.welcome__hero {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .welcome__hero { width: 280px; height: 280px; }
+}
+
+.welcome__halo {
+    position: absolute;
+    inset: -30px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, rgba(147, 203, 82, 0.45), transparent 65%);
+    z-index: 0;
+}
+
+.welcome__hero img {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .welcome__hero img { width: 240px; height: 240px; }
+}
+
+.welcome__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 480px;
+}
+
+.welcome__text h1 {
+    font-size: var(--fs-xl);
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+    .welcome__text h1 { font-size: var(--fs-2xl); }
+}
+
+.welcome__text p {
+    font-size: var(--fs-base);
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
+.welcome__cta {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+}

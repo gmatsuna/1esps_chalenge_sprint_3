@@ -1,0 +1,140 @@
+/* =============================================================
+   Settings (settings.html) – configurações do app.
+   ============================================================= */
+
+@import url("./main.css");
+
+.settings-page {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .settings-page { padding: 2rem 3rem 3rem; gap: 1.75rem; }
+}
+
+.settings-page__intro {
+    color: var(--color-text-muted);
+    font-size: var(--fs-sm);
+    line-height: 1.5;
+    margin-bottom: 0.25rem;
+}
+
+.settings-page__version {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--fs-xs);
+    margin: 1rem 0;
+}
+
+/* Linhas de configuração mais respiradas que .settings-row */
+.settings-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.125rem 1.25rem;
+    border-top: 1px solid var(--color-border);
+    min-height: 72px;
+    gap: 1rem;
+    color: var(--color-text);
+    transition: background-color 0.15s ease;
+}
+
+.settings-row:first-of-type { border-top: none; }
+
+.settings-row--link:hover,
+.settings-row--link:focus-visible {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+.settings-row--danger { color: var(--color-error); }
+.settings-row--danger h3 { color: var(--color-error); }
+
+.settings-row__lead {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.settings-row__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.settings-row__icon--blue   { background-color: var(--color-info-bg);    color: var(--color-info); }
+.settings-row__icon--green  { background-color: var(--color-success-bg); color: var(--color-success); }
+.settings-row__icon--purple { background-color: var(--color-purple-bg);  color: var(--color-purple); }
+.settings-row__icon--orange { background-color: var(--color-warning-bg); color: var(--color-warning); }
+.settings-row__icon--red    { background-color: var(--color-error-bg);   color: var(--color-error); }
+.settings-row__icon--gray   { background-color: var(--color-surface-alt);color: var(--color-text-muted); }
+
+.settings-row__text { flex: 1; min-width: 0; }
+
+.settings-row__text h3 {
+    font-size: var(--fs-base);
+    font-weight: 500;
+    color: inherit;
+    margin: 0;
+}
+
+.settings-row__text p {
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+    margin-top: 4px;
+    line-height: 1.4;
+}
+
+.settings-row__select {
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg);
+    font-family: var(--font-family);
+    font-size: var(--fs-sm);
+    color: var(--color-text);
+    min-height: var(--tap-target-min);
+    cursor: pointer;
+}
+
+.settings-row .arrow { color: var(--color-text-muted); flex-shrink: 0; }
+
+/* Toggle switch (cópia local para a página settings; também usado no help) */
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 28px;
+    flex-shrink: 0;
+}
+.toggle input { opacity: 0; width: 0; height: 0; }
+.toggle__slider {
+    position: absolute; cursor: pointer; inset: 0;
+    background-color: var(--color-border);
+    border-radius: var(--radius-pill);
+    transition: background-color 0.2s ease;
+}
+.toggle__slider::before {
+    content: ""; position: absolute; top: 3px; left: 3px;
+    width: 22px; height: 22px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.toggle input:checked + .toggle__slider { background-color: var(--color-primary); }
+.toggle input:checked + .toggle__slider::before { transform: translateX(20px); }
+.toggle input:focus-visible + .toggle__slider {
+    outline: 3px solid var(--color-accent-1); outline-offset: 2px;
+}

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Configurações da sua conta no CareQuest – preferências, privacidade e mais.">
+    <meta name="theme-color" content="#1C9770">
+    <title>CareQuest – Configurações</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://cdn.lineicons.com/5.1/line/lineicons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/settings-help.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+    <div class="app-shell">
+
+        <header class="page-header" style="padding: 1.5rem 1.25rem 0;">
+            <a href="./profile.html" class="page-header__back" aria-label="Voltar para o perfil">
+                <i class="lni lni-chevron-left" aria-hidden="true"></i>
+            </a>
+            <h1 class="page-header__title">Configurações</h1>
+        </header>
+
+        <main id="main-content" class="settings-page">
+
+            <p class="settings-page__intro">
+                Personalize sua experiência no CareQuest e gerencie sua privacidade conforme a LGPD.
+            </p>
+
+            <!-- Conta -->
+            <section class="settings-page__group" aria-labelledby="grp-conta">
+                <h2 id="grp-conta" class="settings-page__group-title">Conta</h2>
+
+                <a href="#" class="settings-page__link">
+                    <span class="settings-page__link-content">
+                        <span class="settings-page__icon settings-page__icon--primary" aria-hidden="true">
+                            <i class="fa-regular fa-user"></i>
+                        </span>
+                        <span class="settings-page__link-text">
+                            <h3>Dados pessoais</h3>
+                            <p>Nome, e-mail e telefone</p>
+                        </span>
+                    </span>
+                    <i class="lni lni-chevron-right settings-page__arrow" aria-hidden="true"></i>
+                </a>
+
+                <a href="#" class="settings-page__link">
+                    <span class="settings-page__link-content">
+                        <span class="settings-page__icon settings-page__icon--info" aria-hidden="true">
+                            <i class="fa-solid fa-key"></i>
+                        </span>
+                        <span class="settings-page__link-text">
+                            <h3>Alterar senha</h3>
+                            <p>Atualize a senha da sua conta</p>
+                        </span>
+                    </span>
+                    <i class="lni lni-chevron-right settings-page__arrow" aria-hidden="true"></i>
+                </a>
+
+                <a href="./connect.html" class="settings-page__link">
+                    <span class="settings-page__link-content">
+                        <span class="settings-page__icon settings-page__icon--purple" aria-hidden="true">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </span>
+                        <span class="settings-page__link-text">
+                            <h3>Plataformas de saúde</h3>
+                            <p>Apple Health, Google Fit</p>
+                        </span>
+                    </span>
+                    <i class="lni lni-chevron-right settings-page__arrow" aria-hidden="true"></i>
+                </a>
+            </section>
+
+            <!-- Preferências -->
+            <section class="settings-page__group" aria-labelledby="grp-pref">
+                <h2 id="grp-pref" class="settings-page__group-title">Preferências</h2>
+
+                <label class="settings-page__row" for="set-darkmode">
+                    <span class="settings-page__row-text">
+                        <h3>Modo escuro</h3>
+                        <p>Reduz cansaço visual à noite</p>
+                    </span>
+                    <span class="toggle">
+                        <input type="checkbox" id="set-darkmode">
+                        <span class="toggle__slider" aria-hidden="true"></span>
+                    </span>
+                </label>
+
+                <label class="settings-page__row" for="set-haptics">
+                    <span class="settings-page__row-text">
+                        <h3>Vibração ao concluir missão</h3>
+                        <p>Feedback tátil em conquistas</p>
+                    </span>
+                    <span class="toggle">
+                        <input type="checkbox" id="set-haptics" checked>
+                        <span class="toggle__slider" aria-hidden="true"></span>
+                    </span>
+                </label>
+
+                <label class="settings-page__row" for="set-language">
+                    <span class="settings-page__row-text">
+                        <h3>Idioma</h3>
+                        <p>Idioma da interface</p>
+                    </span>
+                    <select id="set-language" class="settings-page__select" aria-label="Idioma">
+                        <option value="pt-br" selected>Português (Brasil)</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                    </select>
+                </label>
+
+                <label class="settings-page__row" for="set-units">
+                    <span class="settings-page__row-text">
+                        <h3>Unidade de medida</h3>
+                        <p>Distância e peso</p>
+                    </span>
+                    <select id="set-units" class="settings-page__select" aria-label="Unidade de medida">
+                        <option value="metric" selected>Métrico (km, kg)</option>
+                        <option value="imperial">Imperial (mi, lb)</option>
+                    </select>
+                </label>
+            </section>
+
+            <!-- Privacidade & Dados -->
+            <section class="settings-page__group" aria-labelledby="grp-priv">
+                <h2 id="grp-priv" class="settings-page__group-title">Privacidade e dados (LGPD)</h2>
+
+                <a href="#" class="settings-page__link">
+                    <span class="settings-page__link-content">
+                        <span class="settings-page__icon settings-page__icon--primary" aria-hidden="true">
+                            <i class="lni lni-shield-2-check"></i>
+                        </span>
+                        <span class="settings-page__link-text">
+                            <h3>Política de privacidade</h3>
+                            <p>Como tratamos seus dados</p>
+                        </span>
+                    </span>
+                    <i class="lni lni-chevron-right settings-page__arrow" aria-hidden="true"></i>
+                </a>
+
+                <a href="#" class="settings-page__link">
+                    <span class="settings-page__link-content">
+                        <span class="settings-page__icon settings-page__icon--info" aria-hidden="true">
+                            <i class="fa-solid fa-file-contract"></i>
+                        </span>
+                        <span class="settings-page__link-text">
+                            <h3>Termos de uso</h3>
+                            <p>Última atualização: Mar/2026</p>
+                        </span>
+                    </span>
+                    <i class="lni lni-chevron-right settings-page__arrow" aria-hidden="true"></i>
+                </a>
+
+                <a href="#" class="settings-page__link">
+                    <span class="settings-page__link-content">
+                        <span class="settings-page__icon settings-page__icon--warning" aria-hidden="true">
+                            <i class="fa-solid fa-download"></i>
+                        </span>
+                        <span class="settings-page__link-text">
+                            <h3>Exportar meus dados</h3>
+                            <p>Baixe uma cópia (formato JSON)</p>
+                        </span>
+                    </span>
+                    <i class="lni lni-chevron-right settings-page__arrow" aria-hidden="true"></i>
+                </a>
+
+                <a href="#" class="settings-page__link">
+                    <span class="settings-page__link-content">
+                        <span class="settings-page__icon settings-page__icon--danger" aria-hidden="true">
+                            <i class="fa-solid fa-trash"></i>
+                        </span>
+                        <span class="settings-page__link-text">
+                            <h3>Excluir minha conta</h3>
+                            <p>Apagar todos os dados permanentemente</p>
+                        </span>
+                    </span>
+                    <i class="lni lni-chevron-right settings-page__arrow" aria-hidden="true"></i>
+                </a>
+            </section>
+
+            <!-- Sobre -->
+            <section class="settings-page__group" aria-labelledby="grp-sobre">
+                <h2 id="grp-sobre" class="settings-page__group-title">Sobre</h2>
+
+                <a href="./help.html" class="settings-page__link">
+                    <span class="settings-page__link-content">
+                        <span class="settings-page__icon settings-page__icon--info" aria-hidden="true">
+                            <i class="fa-regular fa-circle-question"></i>
+                        </span>
+                        <span class="settings-page__link-text">
+                            <h3>Ajuda &amp; Suporte</h3>
+                            <p>Tire suas dúvidas e fale com a gente</p>
+                        </span>
+                    </span>
+                    <i class="lni lni-chevron-right settings-page__arrow" aria-hidden="true"></i>
+                </a>
+
+                <a href="#" class="settings-page__link">
+                    <span class="settings-page__link-content">
+                        <span class="settings-page__icon settings-page__icon--gray" aria-hidden="true">
+                            <i class="fa-regular fa-star"></i>
+                        </span>
+                        <span class="settings-page__link-text">
+                            <h3>Avalie o CareQuest</h3>
+                            <p>Conte para a gente o que achou</p>
+                        </span>
+                    </span>
+                    <i class="lni lni-chevron-right settings-page__arrow" aria-hidden="true"></i>
+                </a>
+            </section>
+
+            <p class="settings-page__version">
+                CareQuest v1.0.0 · 2026 · Care Plus
+            </p>
+        </main>
+
+        <nav class="bottom-nav" aria-label="Navegação principal">
+            <a href="./missions.html" class="bottom-nav__item">
+                <i class="lni lni-home-2" aria-hidden="true"></i>
+                <span>Início</span>
+            </a>
+            <a href="./wallet.html" class="bottom-nav__item">
+                <i class="lni lni-wallet-1" aria-hidden="true"></i>
+                <span>Carteira</span>
+            </a>
+            <a href="./profile.html" class="bottom-nav__item bottom-nav__item--active" aria-current="page">
+                <i class="lni lni-user-4" aria-hidden="true"></i>
+                <span>Perfil</span>
+            </a>
+        </nav>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+</body>
+</html>

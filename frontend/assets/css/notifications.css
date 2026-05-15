@@ -1,0 +1,155 @@
+/* =============================================================
+   Notifications (notifications.html) – configurações de lembretes.
+   ============================================================= */
+
+@import url("./main.css");
+
+.notifications {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    gap: 1.75rem;
+}
+
+@media (min-width: 768px) {
+    .notifications {
+        padding: 2rem 3rem;
+        gap: 2rem;
+    }
+}
+
+.notifications__intro {
+    background-color: rgba(28, 151, 112, 0.06);
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--color-primary);
+    color: var(--color-text-muted);
+    font-size: var(--fs-sm);
+    line-height: 1.5;
+}
+
+.notifications__group {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+    margin: 0;
+}
+
+.notifications__group + .notifications__group {
+    margin-top: 1.75rem;
+}
+
+.notifications__group-title {
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    padding: 1rem 1.25rem 0.75rem;
+    text-transform: uppercase;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    margin: 0;
+}
+
+.notifications__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem;
+    border-top: 1px solid var(--color-border);
+    min-height: 72px;
+    gap: 1.25rem;
+}
+
+.notifications__row:first-of-type { border-top: none; }
+
+.notifications__row-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.notifications__row-text h3 {
+    font-size: var(--fs-base);
+    font-weight: 500;
+    color: var(--color-text);
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.notifications__row-text p {
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+    margin: 0;
+    line-height: 1.45;
+}
+
+/* Toggle switch acessível em CSS puro */
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle__slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: var(--color-border);
+    border-radius: var(--radius-pill);
+    transition: background-color 0.2s ease;
+}
+
+.toggle__slider::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.toggle input:checked + .toggle__slider {
+    background-color: var(--color-primary);
+}
+
+.toggle input:checked + .toggle__slider::before {
+    transform: translateX(20px);
+}
+
+.toggle input:focus-visible + .toggle__slider {
+    outline: 3px solid var(--color-accent-1);
+    outline-offset: 2px;
+}
+
+.notifications__select {
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg);
+    font-family: var(--font-family);
+    font-size: var(--fs-sm);
+    color: var(--color-text);
+    min-height: var(--tap-target-min);
+    cursor: pointer;
+}
+
+.notifications__cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+}

@@ -1,0 +1,252 @@
+/* =============================================================
+   Catalog (catalog.html) – catálogo de recompensas + modal.
+   ============================================================= */
+
+@import url("./main.css");
+
+.catalog__header {
+    background-color: var(--color-surface);
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    box-shadow: var(--shadow-card);
+}
+
+@media (min-width: 768px) {
+    .catalog__header { padding: 1.5rem 3rem; gap: 1.25rem; }
+}
+
+.catalog__filters {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (min-width: 768px) {
+    .catalog__filters { flex-wrap: wrap; overflow: visible; }
+}
+
+.catalog__filter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: var(--radius-pill);
+    background-color: var(--color-surface-alt);
+    color: var(--color-text-muted);
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    white-space: nowrap;
+    min-height: 36px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.catalog__filter:hover {
+    background-color: var(--color-border);
+    color: var(--color-text);
+}
+
+.catalog__filter--active { background-color: var(--color-primary); color: #fff; }
+
+.catalog__filter--active:hover { background-color: var(--color-primary-dark); color: #fff; }
+
+.catalog__main {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .catalog__main {
+        padding: 2rem 3rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .catalog__main { gap: 1.5rem; }
+}
+
+.catalog-card {
+    background-color: var(--color-surface);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.catalog-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(20, 20, 20, 0.10);
+}
+
+.catalog-card--locked { opacity: 0.55; }
+
+.catalog-card__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.catalog-card__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.catalog-card__logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--color-surface-alt);
+    color: var(--color-text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.catalog-card__logo i { font-size: 20px; }
+
+.catalog-card__title { min-width: 0; }
+
+.catalog-card__title h3 {
+    font-size: var(--fs-base);
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.catalog-card__title p {
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+}
+
+.catalog-card__status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    min-height: 32px;
+    flex-shrink: 0;
+}
+
+.catalog-card__status--available {
+    background-color: var(--color-secondary);
+    color: #fff;
+}
+
+.catalog-card__status--available:hover,
+.catalog-card__status--available:focus-visible {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.catalog-card__status--locked {
+    background-color: var(--color-surface-alt);
+    color: var(--color-text-muted);
+}
+
+.catalog-card__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--color-border);
+    padding-top: 0.875rem;
+}
+
+.catalog-card__category {
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+
+.catalog-card__price {
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: var(--fs-base);
+}
+
+/* Modal de resgate */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 20, 20, 0.55);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.modal:target { display: flex; }
+
+.modal__content {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    max-width: 380px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+    position: relative;
+}
+
+.modal__content h2 {
+    font-size: var(--fs-xl);
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.modal__content p {
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+}
+
+.modal__price {
+    font-size: var(--fs-2xl);
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 0.5rem 0;
+}
+
+.modal__actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.modal__close {
+    padding: 0.5rem;
+    color: var(--color-text-muted);
+    font-size: var(--fs-sm);
+    text-decoration: underline;
+}

@@ -1,0 +1,197 @@
+/* =============================================================
+   Profile (profile.html) – perfil + atalhos.
+   ============================================================= */
+
+@import url("./main.css");
+
+.profile__header {
+    background-color: var(--color-primary);
+    color: var(--color-text-on-primary);
+    padding: 1.75rem 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+@media (min-width: 768px) {
+    .profile__header { padding: 2.5rem 3rem 2.5rem; gap: 1.75rem; }
+}
+
+.profile__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile__top h1 {
+    font-size: var(--fs-xl);
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .profile__top h1 { font-size: var(--fs-2xl); }
+}
+
+.profile__top a {
+    color: #fff;
+    width: var(--tap-target-min);
+    height: var(--tap-target-min);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.profile__top a:hover { background-color: rgba(255, 255, 255, 0.15); }
+
+.profile__top i { font-size: 22px; }
+
+.profile__identity {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile__avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    font-size: 32px;
+    flex-shrink: 0;
+}
+
+.profile__name h2 {
+    font-size: var(--fs-md);
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .profile__name h2 { font-size: var(--fs-lg); }
+}
+
+.profile__name p {
+    font-size: var(--fs-sm);
+    opacity: 0.9;
+}
+
+.profile__stats {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.profile__stat-card {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.18);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.profile__stat-card p {
+    font-size: var(--fs-xs);
+    opacity: 0.9;
+}
+
+.profile__stat-card strong {
+    font-size: var(--fs-lg);
+    font-weight: 700;
+}
+
+.profile__main {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .profile__main { padding: 2rem 3rem 3rem; gap: 1.75rem; }
+}
+
+.profile__menu {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+}
+
+.profile__menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.125rem 1.25rem;
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-border);
+    min-height: 64px;
+    transition: background-color 0.15s ease;
+}
+
+.profile__menu-item:last-child { border-bottom: none; }
+
+.profile__menu-item:hover,
+.profile__menu-item:focus-visible {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+.profile__menu-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile__menu-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-info-bg);
+    color: var(--color-info);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.profile__menu-icon--gray {
+    background-color: var(--color-surface-alt);
+    color: var(--color-text-muted);
+}
+
+.profile__menu-item span {
+    font-size: var(--fs-base);
+    font-weight: 500;
+}
+
+.profile__menu-item .arrow { color: var(--color-text-muted); }
+
+.profile__exit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1.125rem;
+    color: var(--color-error);
+    font-weight: 700;
+    border-radius: var(--radius-md);
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-card);
+    min-height: var(--tap-target-min);
+}
+
+.profile__exit:hover {
+    background-color: var(--color-error-bg);
+    color: var(--color-error);
+}

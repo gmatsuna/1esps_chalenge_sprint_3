@@ -1,4 +1,4 @@
-from pontos import CalcularPontos
+from services.pontos import CalcularPontos
 
 class RegistrarDia:
     def __init__(self, passos, academia, alimentacao, hidratacao, sono):

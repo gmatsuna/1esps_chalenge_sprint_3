@@ -1,0 +1,138 @@
+/* =============================================================
+   Accomplished (accomplished.html) – missão concluída.
+   ============================================================= */
+
+@import url("./main.css");
+
+.accomplished {
+    background-color: var(--color-primary);
+    color: var(--color-text-on-primary);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+    min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+    .accomplished { padding: 4rem 3rem; gap: 2.5rem; }
+}
+
+.accomplished__mascot {
+    width: 176px;
+    height: 176px;
+    border-radius: 50%;
+    background-color: var(--color-surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    .accomplished__mascot { width: 220px; height: 220px; }
+}
+
+.accomplished__mascot img {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+    .accomplished__mascot img { width: 160px; height: 160px; }
+}
+
+.accomplished__main {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.accomplished__title {
+    text-align: center;
+}
+
+.accomplished__title h1 {
+    font-size: var(--fs-xl);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .accomplished__title h1 { font-size: var(--fs-2xl); }
+}
+
+.accomplished__title p {
+    font-size: var(--fs-base);
+    opacity: 0.95;
+}
+
+.accomplished__report {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.accomplished__report-row {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    background-color: rgba(255, 255, 255, 0.14);
+    padding: 1.25rem;
+    border-radius: var(--radius-md);
+    backdrop-filter: blur(4px);
+}
+
+.accomplished__report-row i {
+    font-size: 28px;
+    width: 32px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.accomplished__report-row .icon-xp     { color: #FFDF20; }
+.accomplished__report-row .icon-points { color: #FFDF20; }
+.accomplished__report-row .icon-streak { color: #FF8904; }
+
+.accomplished__report-row h2 {
+    font-size: var(--fs-md);
+    font-weight: 700;
+}
+
+.accomplished__report-row p {
+    font-size: var(--fs-xs);
+    opacity: 0.85;
+    margin-top: 2px;
+}
+
+.accomplished__actions {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.accomplished__actions .btn-primary-cta--inverse {
+    background-color: var(--color-surface);
+    color: var(--color-primary);
+}
+
+.accomplished__actions .link-light {
+    color: #fff;
+    font-weight: 500;
+    font-size: var(--fs-sm);
+    text-decoration: underline;
+    padding: 0.5rem;
+}

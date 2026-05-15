@@ -34,6 +34,7 @@ form.addEventListener("submit", async (event) => {
         `
 
         form.reset()
+        carregarHistorico()
 
     } catch (erro) {
 
@@ -46,4 +47,48 @@ form.addEventListener("submit", async (event) => {
         console.error(erro)
     }
 
+    async function carregarHistorico() {
+
+        try {
+
+            const resposta = await fetch("http://127.0.0.1:5000/historico")
+
+            const historico = await resposta.json()
+
+            const container = document.getElementById("historico")
+
+            container.innerHTML = ""
+
+            historico.forEach((item) => {
+
+                container.innerHTML += `
+
+                    <div class="bg-gray-100 p-4 rounded-xl shadow">
+
+                        <p><strong>👣 Passos:</strong> ${item.passos}</p>
+
+                        <p><strong>🏋 Academia:</strong> ${item.academia ? "Sim" : "Não"}</p>
+
+                        <p><strong>🥗 Alimentação:</strong> ${item.alimentacao ? "Sim" : "Não"}</p>
+
+                        <p><strong>💧 Hidratação:</strong> ${item.hidratacao ? "Sim" : "Não"}</p>
+
+                        <p><strong>😴 Sono:</strong> ${item.sono ? "Sim" : "Não"}</p>
+
+                        <p class="text-blue-600 font-bold mt-2">
+                            ⭐ Pontos: ${item.pontos}
+                        </p>
+
+                    </div>
+                `
+            })
+
+        } catch (erro) {
+
+            console.error("Erro ao carregar histórico", erro)
+        }
+    }
+
 })
+
+carregarHistorico()

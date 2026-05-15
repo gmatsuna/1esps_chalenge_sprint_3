@@ -1,0 +1,322 @@
+/* =============================================================
+   Settings & Help (settings.html, help.html)
+   Reutilizam .settings-group / .settings-row do main.css
+   ============================================================= */
+
+@import url("./main.css");
+
+.settings-page {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1.25rem;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .settings-page {
+        padding: 2rem 3rem;
+        gap: 1.75rem;
+    }
+}
+
+.settings-page__intro {
+    background-color: rgba(28, 151, 112, 0.06);
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--color-primary);
+    color: var(--color-text-muted);
+    font-size: var(--fs-sm);
+    line-height: 1.5;
+}
+
+.settings-page__group {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+    margin: 0;
+}
+
+.settings-page__group + .settings-page__group { margin-top: 1.5rem; }
+
+.settings-page__group-title {
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    padding: 1rem 1.25rem 0.75rem;
+    text-transform: uppercase;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    margin: 0;
+}
+
+/* Linha clicável (atalhos) */
+.settings-page__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem;
+    border-top: 1px solid var(--color-border);
+    min-height: 64px;
+    gap: 1rem;
+    color: var(--color-text);
+    transition: background-color 0.15s ease;
+}
+
+.settings-page__link:first-of-type { border-top: none; }
+
+.settings-page__link:hover,
+.settings-page__link:focus-visible {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+.settings-page__link-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.settings-page__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.settings-page__icon--primary { background-color: rgba(28, 151, 112, 0.12); color: var(--color-primary); }
+.settings-page__icon--info    { background-color: var(--color-info-bg);    color: var(--color-info); }
+.settings-page__icon--purple  { background-color: var(--color-purple-bg);  color: var(--color-purple); }
+.settings-page__icon--warning { background-color: var(--color-warning-bg); color: var(--color-warning); }
+.settings-page__icon--gray    { background-color: var(--color-surface-alt); color: var(--color-text-muted); }
+.settings-page__icon--danger  { background-color: var(--color-error-bg);   color: var(--color-error); }
+
+.settings-page__link-text h3 {
+    font-size: var(--fs-base);
+    font-weight: 500;
+    color: var(--color-text);
+    margin: 0;
+}
+
+.settings-page__link-text p {
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+    margin-top: 4px;
+    line-height: 1.4;
+}
+
+.settings-page__arrow {
+    color: var(--color-text-muted);
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+/* Linha com toggle */
+.settings-page__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem;
+    border-top: 1px solid var(--color-border);
+    min-height: 72px;
+    gap: 1.25rem;
+}
+
+.settings-page__row:first-of-type { border-top: none; }
+
+.settings-page__row-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.settings-page__row-text h3 {
+    font-size: var(--fs-base);
+    font-weight: 500;
+    color: var(--color-text);
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.settings-page__row-text p {
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+    margin: 0;
+    line-height: 1.45;
+}
+
+/* Versão e info na base */
+.settings-page__version {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--fs-xs);
+    padding: 1rem;
+}
+
+/* Toggle (reutilizado do notifications.css) */
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.toggle input { opacity: 0; width: 0; height: 0; }
+
+.toggle__slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: var(--color-border);
+    border-radius: var(--radius-pill);
+    transition: background-color 0.2s ease;
+}
+
+.toggle__slider::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.toggle input:checked + .toggle__slider { background-color: var(--color-primary); }
+.toggle input:checked + .toggle__slider::before { transform: translateX(20px); }
+.toggle input:focus-visible + .toggle__slider {
+    outline: 3px solid var(--color-accent-1);
+    outline-offset: 2px;
+}
+
+/* Select com mesma cara do form */
+.settings-page__select {
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg);
+    font-family: var(--font-family);
+    font-size: var(--fs-sm);
+    color: var(--color-text);
+    min-height: var(--tap-target-min);
+    cursor: pointer;
+}
+
+/* Help: cards de FAQ usando details/summary */
+.help-faq {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.help-faq details {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+}
+
+.help-faq summary {
+    cursor: pointer;
+    padding: 1.25rem;
+    font-size: var(--fs-base);
+    font-weight: 500;
+    color: var(--color-text);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: var(--tap-target-min);
+}
+
+.help-faq summary::-webkit-details-marker { display: none; }
+
+.help-faq summary::after {
+    content: "\f078"; /* fa-chevron-down */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 14px;
+    color: var(--color-text-muted);
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.help-faq details[open] summary::after { transform: rotate(180deg); }
+
+.help-faq__answer {
+    padding: 0 1.25rem 1.25rem;
+    color: var(--color-text-muted);
+    font-size: var(--fs-sm);
+    line-height: 1.55;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1rem;
+    margin-top: 0.5rem;
+}
+
+.help-contact {
+    background-color: rgba(28, 151, 112, 0.06);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    border: 1px solid rgba(28, 151, 112, 0.16);
+}
+
+.help-contact h2 {
+    font-size: var(--fs-md);
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0;
+}
+
+.help-contact p {
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+    margin: 0;
+    max-width: 380px;
+}
+
+.help-contact__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 0.75rem;
+    width: 100%;
+}
+
+.help-contact__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1rem;
+    border-radius: var(--radius-pill);
+    background-color: var(--color-surface);
+    color: var(--color-primary);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    border: 1px solid rgba(28, 151, 112, 0.2);
+    min-height: var(--tap-target-min);
+}
+
+.help-contact__btn:hover,
+.help-contact__btn:focus-visible {
+    background-color: var(--color-primary);
+    color: #fff;
+    border-color: var(--color-primary);
+}

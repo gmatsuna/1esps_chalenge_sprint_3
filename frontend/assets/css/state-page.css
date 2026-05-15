@@ -1,0 +1,69 @@
+/* =============================================================
+   Estados vazios e de erro (state-page).
+   ============================================================= */
+
+@import url("./main.css");
+
+.state-page {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    gap: 1.75rem;
+}
+
+@media (min-width: 768px) {
+    .state-page { padding: 4rem 3rem; gap: 2rem; }
+}
+
+.state-page__illustration {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: var(--color-success-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-success);
+    font-size: 64px;
+    flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    .state-page__illustration { width: 180px; height: 180px; font-size: 80px; }
+}
+
+.state-page__illustration--error {
+    background-color: var(--color-error-bg);
+    color: var(--color-error);
+}
+
+.state-page__title {
+    font-size: var(--fs-xl);
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+@media (min-width: 768px) {
+    .state-page__title { font-size: var(--fs-2xl); }
+}
+
+.state-page__desc {
+    font-size: var(--fs-base);
+    color: var(--color-text-muted);
+    max-width: 380px;
+    line-height: 1.5;
+}
+
+.state-page__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 480px;
+    margin-top: 1rem;
+}

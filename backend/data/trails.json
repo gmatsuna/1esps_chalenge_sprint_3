@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "nome": "Sono em Dia",
+        "descricao": "Melhore sua qualidade de sono",
+        "objetivo": "Dormir melhor",
+        "icone": "fa-moon",
+        "classe": "moon"
+    },
+
+    {
+        "id": 2,
+        "nome": "Movimento na Rotina",
+        "descricao": "Atividades físicas leves e constantes",
+        "objetivo": "Mexer o corpo",
+        "icone": "fa-heart-pulse",
+        "classe": "body"
+    },
+
+    {
+        "id": 3,
+        "nome": "Mente Tranquila",
+        "descricao": "Redução de estresse e ansiedade",
+        "objetivo": "Reduzir ansiedade",
+        "icone": "fa-brain",
+        "classe": "brain"
+    },
+
+    {
+        "id": 4,
+        "nome": "Alimentação Melhor",
+        "descricao": "Escolhas nutricionais conscientes",
+        "objetivo": "Comer melhor",
+        "icone": "fa-utensils",
+        "classe": "food"
+    }
+]

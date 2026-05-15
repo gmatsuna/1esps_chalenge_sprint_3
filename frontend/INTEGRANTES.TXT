@@ -1,0 +1,10 @@
+CareQuest - Challenge Care Plus - Sprint 2 (Front-End Design)
+1ESPS - Engenharia de Software - FIAP - 2026/1
+
+Integrantes do grupo:
+
+Nome: Douglas Taveira Vilella Roberto    RM: 567846
+Nome: Fábio Alexandre Barbosa Filho      RM: 567419
+Nome: Gilberto Hideaki Matsunaga         RM: 568191
+Nome: Igor Davi Avelar Rosa Cesário      RM: 568163
+Nome: Wenderson da Silva Santos          RM: 567847
