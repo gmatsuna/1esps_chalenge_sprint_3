@@ -30,19 +30,19 @@
                         <img src="../assets/images/mascote.png" alt="Avatar do usuário Alex.">
                     </div>
                     <div class="missions__greeting">
-                        <p>Olá, Alex</p>
+                        <p id="usuario-nome">Olá, Usuário</p>
                         <h1>Vamos nos cuidar?</h1>
                     </div>
                 </div>
-                <span class="missions__streak" aria-label="Sequência atual de 7 dias">
+                <span class="missions__streak" id="usuario-streak">
                     <i class="fa-solid fa-fire" aria-hidden="true"></i>
-                    7 dias
+                    0 dias
                 </span>
             </div>
 
             <div class="missions__progress">
                 <div class="missions__progress-text">
-                    <span class="level">Nível 2</span>
+                    <span class="level" id="usuario-nivel">Nível 1</span>
                     <span class="classification">Explorador Equilibrado</span>
                 </div>
                 <div class="missions__progress-bar"
@@ -51,7 +51,7 @@
                      aria-valuemin="0"
                      aria-valuemax="100"
                      aria-label="Progresso para o próximo nível">
-                    <span></span>
+                    <span id="barra-progresso"></span>
                 </div>
             </div>
         </header>

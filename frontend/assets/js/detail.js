@@ -44,33 +44,33 @@ async function carregarDetalhesMissao() {
 function renderizarMissao(missao) {
 
     document.getElementById(
-        'titulo-missao'
+        'missao-titulo'
     ).textContent =
         missao.titulo
 
     document.getElementById(
-        'descricao-missao'
+        'missao-descricao'
     ).textContent =
         missao.descricao
 
     document.getElementById(
-        'xp-missao'
+        'missao-xp'
     ).textContent =
         `+${missao.xp} XP`
 
     document.getElementById(
-        'pontos-missao'
+        'missao-pontos'
     ).textContent =
         `+${missao.pontos} pontos`
 
     document.getElementById(
-        'categoria-missao'
+        'missao-categoria'
     ).textContent =
         missao.categoria
 
     const categoria =
     document.getElementById(
-        'categoria-missao'
+        'missao-categoria'
     )
 
     categoria.classList.add(
@@ -78,7 +78,7 @@ function renderizarMissao(missao) {
     )
 
     document.getElementById(
-        'tipo-missao'
+        'missao-tipo'
     ).textContent =
         missao.tipo
 }
@@ -88,6 +88,80 @@ document.addEventListener(
     () => {
 
         carregarDetalhesMissao()
+        configurarConclusao()
 
     }
 )
+
+function configurarConclusao() {
+
+    const botao =
+        document.getElementById(
+            'btn-concluir'
+        )
+
+    botao.addEventListener(
+        'click',
+        async () => {
+
+            try {
+
+                const parametros =
+                    new URLSearchParams(
+                        window.location.search
+                    )
+
+                const id =
+                    parametros.get('id')
+
+                const resposta =
+                    await fetch(
+                        'http://127.0.0.1:5000/concluir-missao',
+                        {
+                            method: 'POST',
+
+                            headers: {
+                                'Content-Type':
+                                    'application/json'
+                            },
+
+                            body: JSON.stringify({
+                                missao_id: Number(id)
+                            })
+                        }
+                    )
+
+                const resultado =
+                    await resposta.json()
+
+
+                if (resultado.erro) {
+
+                    alert(resultado.erro)
+                    return
+                }
+
+                localStorage.setItem(
+                    'ultimaMissaoConcluida',
+                    JSON.stringify({
+                        titulo: resultado.titulo,
+                        xp: resultado.xp_ganho,
+                        pontos: resultado.pontos_ganhos,
+                        trilha: resultado.trilha,
+                        streak: resultado.streak
+                    })
+                )
+
+                window.location.href =
+                    './accomplished.html'
+
+            } catch (erro) {
+
+                console.error(
+                    'Erro ao concluir missão:',
+                    erro
+                )
+            }
+        }
+    )
+}

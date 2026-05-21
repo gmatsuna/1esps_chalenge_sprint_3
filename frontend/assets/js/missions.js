@@ -72,10 +72,65 @@ async function carregarMissoes() {
     }
 }
 
+async function carregarUsuario() {
+
+    try {
+
+        const resposta =
+            await fetch(
+                'http://127.0.0.1:5000/usuario'
+            )
+
+        const usuario =
+            await resposta.json()
+
+        document.getElementById(
+            'usuario-nome'
+        ).textContent =
+            `Olá, ${usuario.nome}`
+
+        document.getElementById(
+            'usuario-streak'
+        ).innerHTML =
+            `
+                <i class="fa-solid fa-fire" aria-hidden="true"></i>
+                ${usuario.streak} dias
+            `
+
+        document.getElementById(
+            'usuario-nivel'
+        ).textContent =
+            `Nível ${usuario.nivel}`
+
+        document.getElementById(
+            'usuario-nivel'
+        ).textContent =
+            `Nível ${usuario.nivel}`
+
+        const xpAtual =
+            usuario.xp % 100
+
+        const porcentagem =
+            xpAtual
+
+        document.getElementById(
+            'barra-progresso'
+        ).style.width =
+            `${porcentagem}%`
+
+    } catch (erro) {
+
+        console.error(
+            'Erro ao carregar usuário:',
+            erro
+        )
+    }
+}
+
 document.addEventListener(
     "DOMContentLoaded",
     () => {
-
         carregarMissoes()
+        carregarUsuario()
     }
 )
