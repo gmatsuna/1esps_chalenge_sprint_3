@@ -49,5 +49,109 @@
         "categoria": "Sono em Dia",
         "classe": "blue",
         "icone": "fa-moon"
+    },
+
+    {
+        "id": 5,
+        "trilha": "Movimento na Rotina",
+        "titulo": "Subir escadas por 10 minutos",
+        "descricao": "Troque o elevador pelas escadas hoje.",
+        "xp": 20,
+        "pontos": 12,
+        "tipo": "Diária",
+        "categoria": "Movimento na Rotina",
+        "classe": "green",
+        "icone": "fa-stairs"
+    },
+
+    {
+        "id": 6,
+        "trilha": "Movimento na Rotina",
+        "titulo": "Alongamento matinal",
+        "descricao": "Faça 10 minutos de alongamento ao acordar.",
+        "xp": 18,
+        "pontos": 10,
+        "tipo": "Diária",
+        "categoria": "Movimento na Rotina",
+        "classe": "green",
+        "icone": "fa-person-walking"
+    },
+
+    {
+        "id": 7,
+        "trilha": "Alimentação Melhor",
+        "titulo": "Comer uma fruta hoje",
+        "descricao": "Inclua ao menos uma fruta na sua alimentação.",
+        "xp": 15,
+        "pontos": 10,
+        "tipo": "Diária",
+        "categoria": "Alimentação Melhor",
+        "classe": "red",
+        "icone": "fa-apple-whole"
+    },
+
+    {
+        "id": 8,
+        "trilha": "Alimentação Melhor",
+        "titulo": "Evitar refrigerante",
+        "descricao": "Substitua refrigerantes por água ou suco natural.",
+        "xp": 25,
+        "pontos": 18,
+        "tipo": "Diária",
+        "categoria": "Alimentação Melhor",
+        "classe": "red",
+        "icone": "fa-bottle-water"
+    },
+
+    {
+        "id": 9,
+        "trilha": "Mente Tranquila",
+        "titulo": "Ouvir música relaxante",
+        "descricao": "Reserve 10 minutos para desacelerar ouvindo música.",
+        "xp": 20,
+        "pontos": 14,
+        "tipo": "Diária",
+        "categoria": "Mente Tranquila",
+        "classe": "purple",
+        "icone": "fa-music"
+    },
+
+    {
+        "id": 10,
+        "trilha": "Mente Tranquila",
+        "titulo": "Escrever 3 gratidões",
+        "descricao": "Anote três coisas boas do seu dia.",
+        "xp": 28,
+        "pontos": 20,
+        "tipo": "Diária",
+        "categoria": "Mente Tranquila",
+        "classe": "purple",
+        "icone": "fa-book-open"
+    },
+
+    {
+        "id": 11,
+        "trilha": "Sono em Dia",
+        "titulo": "Desligar telas antes de dormir",
+        "descricao": "Evite celular e TV 30 minutos antes de dormir.",
+        "xp": 22,
+        "pontos": 15,
+        "tipo": "Diária",
+        "categoria": "Sono em Dia",
+        "classe": "blue",
+        "icone": "fa-mobile-screen-button"
+    },
+
+    {
+        "id": 12,
+        "trilha": "Sono em Dia",
+        "titulo": "Dormir antes das 23h",
+        "descricao": "Tente manter uma rotina de sono mais saudável.",
+        "xp": 35,
+        "pontos": 25,
+        "tipo": "Diária",
+        "categoria": "Sono em Dia",
+        "classe": "blue",
+        "icone": "fa-bed"
     }
 ]

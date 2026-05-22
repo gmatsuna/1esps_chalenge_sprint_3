@@ -6,6 +6,9 @@
         "pontos": 40,
         "nivel": 1,
         "streak": 1,
+        "missoes_favoritas": [
+            2
+        ],
         "missoes_concluidas": [
             4
         ]
