@@ -1,4 +1,4 @@
-CareQuest - Challenge Care Plus - Sprint 2 (Front-End Design)
+CareQuest - Challenge Care Plus - Sprint 3
 1ESPS - Engenharia de Software - FIAP - 2026/1
 
 Integrantes do grupo:

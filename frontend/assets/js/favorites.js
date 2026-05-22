@@ -1,3 +1,5 @@
+let missaoSelecionada = null
+
 async function carregarFavoritos() {
 
     try {
@@ -139,7 +141,7 @@ async function carregarFavoritos() {
                                 </a>
 
                                 <button
-                                    onclick="trocarFavorito(${missao.id})"
+                                    onclick="abrirModalTroca(${missao.id})"
                                     class="
                                         bg-yellow-500
                                         hover:bg-yellow-600
@@ -235,19 +237,160 @@ async function removerFavorito(id) {
     }
 }
 
-async function trocarFavorito(idAntigo) {
+function abrirModalTroca(id) {
+
+    missaoSelecionada = id
+
+    const modal =
+        document.getElementById(
+            'modal-troca'
+        )
+
+    modal.classList.remove(
+        'hidden'
+    )
+
+    modal.classList.add(
+        'flex'
+    )
+
+    carregarMissoesModal()
+}
+
+
+function fecharModal() {
+
+    const modal =
+        document.getElementById(
+            'modal-troca'
+        )
+
+    modal.classList.remove(
+        'flex'
+    )
+
+    modal.classList.add(
+        'hidden'
+    )
+}
+
+
+async function carregarMissoesModal() {
 
     try {
 
-        const novoId =
-            prompt(
-                'Digite o ID da nova missão:'
+        const resposta =
+            await fetch(
+                'http://127.0.0.1:5000/missoes'
             )
 
-        if (!novoId) {
+        const missoes =
+            await resposta.json()
 
-            return
-        }
+        const container =
+            document.getElementById(
+                'modal-missoes'
+            )
+
+        container.innerHTML = ''
+
+        missoes.forEach(
+
+            (missao) => {
+
+                container.innerHTML += `
+
+                    <div
+                        onclick="
+                            selecionarNovaMissao(
+                                ${missao.id}
+                            )
+                        "
+
+                        class="
+                            bg-slate-50
+                            hover:bg-emerald-50
+                            border
+                            border-slate-200
+                            hover:border-emerald-400
+                            rounded-2xl
+                            p-4
+                            cursor-pointer
+                            transition
+                            flex
+                            flex-col
+                            gap-3
+                        "
+                    >
+
+                        <div>
+
+                            <span class="
+                                text-xs
+                                font-semibold
+                                text-emerald-600
+                            ">
+                                ${missao.trilha}
+                            </span>
+
+                            <h3 class="
+                                text-lg
+                                font-bold
+                                text-slate-800
+                                mt-1
+                            ">
+                                ${missao.titulo}
+                            </h3>
+
+                            <p class="
+                                text-sm
+                                text-slate-500
+                                mt-2
+                            ">
+                                ${missao.descricao}
+                            </p>
+
+                        </div>
+
+                        <div class="
+                            flex
+                            gap-4
+                            text-sm
+                            font-semibold
+                        ">
+
+                            <span class="
+                                text-yellow-500
+                            ">
+                                ⭐ ${missao.xp} XP
+                            </span>
+
+                            <span class="
+                                text-emerald-600
+                            ">
+                                💰 ${missao.pontos} pts
+                            </span>
+
+                        </div>
+
+                    </div>
+                `
+            }
+        )
+
+    } catch (erro) {
+
+        console.error(
+            'Erro ao carregar missões:',
+            erro
+        )
+    }
+}
+
+
+async function selecionarNovaMissao(idNova) {
+
+    try {
 
         const resposta =
             await fetch(
@@ -265,10 +408,12 @@ async function trocarFavorito(idAntigo) {
                     body: JSON.stringify(
                         {
                             missao_antiga:
-                                Number(idAntigo),
+                                Number(
+                                    missaoSelecionada
+                                ),
 
                             missao_nova:
-                                Number(novoId)
+                                Number(idNova)
                         }
                     )
                 }
@@ -277,9 +422,20 @@ async function trocarFavorito(idAntigo) {
         const dados =
             await resposta.json()
 
+        if (dados.erro) {
+
+            alert(
+                dados.erro
+            )
+
+            return
+        }
+
         alert(
             dados.mensagem
         )
+
+        fecharModal()
 
         carregarFavoritos()
 

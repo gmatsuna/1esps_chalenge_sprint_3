@@ -364,3 +364,28 @@ def atualizar_favorito():
                 'erro': str(erro)
             }
         ), 500
+    
+
+@progress_bp.route(
+    '/missoes',
+    methods=['GET']
+)
+def listar_missoes():
+
+    try:
+
+        missoes = carregar_json(
+            ARQUIVO_MISSOES
+        )
+
+        return jsonify(
+            missoes
+        )
+
+    except Exception as erro:
+
+        return jsonify(
+            {
+                'erro': str(erro)
+            }
+        ), 500

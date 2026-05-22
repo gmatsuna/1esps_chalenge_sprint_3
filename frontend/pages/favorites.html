@@ -57,6 +57,71 @@
 
     </div>
 
+    <div
+        id="modal-troca"
+        class="
+            fixed
+            inset-0
+            bg-black/50
+            hidden
+            items-center
+            justify-center
+            z-50
+            p-4
+        "
+    >
+
+        <div class="
+            bg-white
+            w-full
+            max-w-2xl
+            rounded-3xl
+            p-6
+            max-h-[80vh]
+            overflow-y-auto
+        ">
+
+            <div class="
+                flex
+                justify-between
+                items-center
+                mb-6
+            ">
+
+                <h2 class="
+                    text-2xl
+                    font-bold
+                    text-slate-800
+                ">
+                    Trocar missão favorita
+                </h2>
+
+                <button
+                    onclick="fecharModal()"
+                    class="
+                        text-slate-500
+                        text-2xl
+                    "
+                >
+                    ×
+                </button>
+
+            </div>
+
+            <div
+                id="modal-missoes"
+                class="
+                    grid
+                    md:grid-cols-2
+                    gap-4
+                "
+            >
+            </div>
+
+        </div>
+
+    </div>
+
     <script src="../assets/js/favorites.js"></script>
 
 </body>

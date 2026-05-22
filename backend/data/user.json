@@ -2,15 +2,17 @@
     {
         "id": 1,
         "nome": "Alex",
-        "xp": 30,
-        "pontos": 40,
+        "xp": 45,
+        "pontos": 50,
         "nivel": 1,
-        "streak": 1,
+        "streak": 2,
         "missoes_favoritas": [
-            2
+            3,
+            12
         ],
         "missoes_concluidas": [
-            4
+            4,
+            2
         ]
     }
 ]
