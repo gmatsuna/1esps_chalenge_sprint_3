@@ -1,6 +1,6 @@
 async function carregarTrilhas() {
     try {
-        const response = await fetch('http://localhost:5000/trilhas');
+        const response = await fetch(`${API_BASE_URL}/trilhas`);
         const trilhas = await response.json();
         const container = document.getElementById('trail-list');
 

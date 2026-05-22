@@ -7,11 +7,6 @@ async function carregarResumo() {
             )
         ) || []
 
-    console.log(
-        'Trilhas selecionadas:',
-        trilhasSelecionadas
-    )
-
     try {
 
         const query =
@@ -21,28 +16,14 @@ async function carregarResumo() {
 
         const response =
             await fetch(
-                `http://localhost:5000/objetivos?trilhas=${query}`
+                `${API_BASE_URL}/objetivos?trilhas=${query}`
             )
 
         const objetivos =
             await response.json()
 
-        console.log(
-            'Objetivos:',
-            objetivos
-        )
-
-        console.log(
-            'Objetivos recebidos do backend:',
-            objetivos
-        )
-
         renderizarResumo(
             objetivos
-        )
-
-        renderizarResumo(
-            objetivosFiltrados
         )
 
     } catch (error) {

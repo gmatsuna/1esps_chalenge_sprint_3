@@ -11,7 +11,7 @@ async function carregarMissoes() {
 
         const query = trilhasSelecionadas.join(',')
 
-        const resposta = await fetch(`http://127.0.0.1:5000/missoes?trilhas=${query}`)
+        const resposta = await fetch(`${API_BASE_URL}/missoes?trilhas=${query}`)
 
         const missoes = await resposta.json()
 
@@ -78,7 +78,7 @@ async function carregarUsuario() {
 
         const resposta =
             await fetch(
-                'http://127.0.0.1:5000/usuario'
+                `${API_BASE_URL}/usuario`
             )
 
         const usuario =

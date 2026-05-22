@@ -17,7 +17,7 @@ async function carregarDetalhesMissao() {
 
         const resposta =
             await fetch(
-                `http://127.0.0.1:5000/missao/${id}`
+                `${API_BASE_URL}/missao/${id}`
             )
 
         const missao =
@@ -117,7 +117,7 @@ function configurarConclusao() {
 
                 const resposta =
                     await fetch(
-                        'http://127.0.0.1:5000/concluir-missao',
+                        `${API_BASE_URL}/concluir-missao`,
                         {
                             method: 'POST',
 
@@ -191,7 +191,7 @@ function configurarFavorito() {
 
                 const resposta =
                     await fetch(
-                        'http://127.0.0.1:5000/favoritar-missao',
+                        `${API_BASE_URL}/favoritar-missao`,
                         {
                             method: 'POST',
 

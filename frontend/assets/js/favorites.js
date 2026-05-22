@@ -6,7 +6,7 @@ async function carregarFavoritos() {
 
         const resposta =
             await fetch(
-                'http://127.0.0.1:5000/favoritos'
+                `${API_BASE_URL}/favoritos`
             )
 
         const favoritos =
@@ -201,7 +201,7 @@ async function removerFavorito(id) {
         const resposta =
             await fetch(
 
-                'http://127.0.0.1:5000/desfavoritar-missao',
+                `${API_BASE_URL}/desfavoritar-missao`,
 
                 {
                     method: 'DELETE',
@@ -281,7 +281,7 @@ async function carregarMissoesModal() {
 
         const resposta =
             await fetch(
-                'http://127.0.0.1:5000/missoes'
+                `${API_BASE_URL}/missoes`
             )
 
         const missoes =
@@ -395,7 +395,7 @@ async function selecionarNovaMissao(idNova) {
         const resposta =
             await fetch(
 
-                'http://127.0.0.1:5000/atualizar-favorito',
+                `${API_BASE_URL}/atualizar-favorito`,
 
                 {
                     method: 'PUT',

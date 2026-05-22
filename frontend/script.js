@@ -14,7 +14,7 @@ form.addEventListener("submit", async (event) => {
 
     try {
 
-        const resposta = await fetch("http://127.0.0.1:5000/registrar", {
+        const resposta = await fetch("${API_BASE_URL}/registrar", {
 
             method: "POST",
 
@@ -51,7 +51,7 @@ form.addEventListener("submit", async (event) => {
 
         try {
 
-            const resposta = await fetch("http://127.0.0.1:5000/historico")
+            const resposta = await fetch("${API_BASE_URL}/historico")
 
             const historico = await resposta.json()
 

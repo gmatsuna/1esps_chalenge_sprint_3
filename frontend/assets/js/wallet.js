@@ -4,7 +4,7 @@ async function carregarCarteira() {
 
         const resposta =
             await fetch(
-                'http://127.0.0.1:5000/usuario'
+                `${API_BASE_URL}/usuario`
             )
 
         const usuario =
