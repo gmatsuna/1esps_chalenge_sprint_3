@@ -16,5 +16,24 @@ app.register_blueprint(trail_bp)
 app.register_blueprint(summary_bp)
 app.register_blueprint(detail_bp)
 app.register_blueprint(progress_bp)
+
+@app.route('/')
+def home():
+
+    return {
+        'mensagem':
+            'API CareQuest online!'
+    }
+
+
+if __name__ == '__main__':
+
+    app.run(
+        host='0.0.0.0',
+        port=5000,
+        debug=True
+    )
+
+
 if __name__ == '__main__':
     app.run(debug=True)
