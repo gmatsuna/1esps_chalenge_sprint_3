@@ -107,10 +107,15 @@
 
 .detail__progress-bar > span {
     display: block;
-    width: 33%;
+    width: 0%;
     height: 100%;
-    background-color: var(--color-primary);
+    background: linear-gradient(
+        90deg,
+        #1C9770,
+        #38C793
+    );
     border-radius: var(--radius-pill);
+    transition: width 0.8s ease;
 }
 
 .detail__progress-label {

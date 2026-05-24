@@ -64,7 +64,8 @@ async function carregarFavoritos() {
                         p-5
                         flex
                         flex-col
-                        gap-4
+                        gap-5
+                        min-h-[300px]
                     ">
 
                         <div>
@@ -96,17 +97,14 @@ async function carregarFavoritos() {
 
                         </div>
 
-                        <div class="
-                            flex
-                            justify-between
-                            items-center
-                        ">
+                        <div class="mt-auto">
 
                             <div class="
                                 flex
-                                gap-4
+                                gap-6
                                 text-sm
                                 font-semibold
+                                mb-4
                             ">
 
                                 <span class="
@@ -123,11 +121,16 @@ async function carregarFavoritos() {
 
                             </div>
 
-                            <div class="flex gap-2">
+                            <div class="
+                                flex
+                                gap-2
+                            ">
 
                                 <a
                                     href="./detail.html?id=${missao.id}"
                                     class="
+                                        flex-1
+                                        text-center
                                         bg-emerald-500
                                         hover:bg-emerald-600
                                         text-white
@@ -143,6 +146,7 @@ async function carregarFavoritos() {
                                 <button
                                     onclick="abrirModalTroca(${missao.id})"
                                     class="
+                                        flex-1
                                         bg-yellow-500
                                         hover:bg-yellow-600
                                         text-white
@@ -158,6 +162,7 @@ async function carregarFavoritos() {
                                 <button
                                     onclick="removerFavorito(${missao.id})"
                                     class="
+                                        flex-1
                                         bg-red-500
                                         hover:bg-red-600
                                         text-white

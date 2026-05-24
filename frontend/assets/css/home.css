@@ -92,3 +92,245 @@
     width: 100%;
     margin-top: 1rem;
 }
+
+
+/* =============================================================
+   ANIMAÇÕES
+   ============================================================= */
+
+/* Entrada suave da página */
+
+.splash {
+    animation: fadePage 1s ease;
+}
+
+@keyframes fadePage {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Glow pulsando */
+
+@keyframes glow {
+
+    0% {
+        box-shadow:
+            0 12px 40px rgba(0, 0, 0, 0.18);
+    }
+
+    50% {
+        box-shadow:
+            0 16px 50px rgba(255, 255, 255, 0.22);
+    }
+
+    100% {
+        box-shadow:
+            0 12px 40px rgba(0, 0, 0, 0.18);
+    }
+}
+
+
+/* Fade-in do texto */
+
+.splash__fade-in {
+    animation:
+        fadeInText 1.2s ease;
+}
+
+@keyframes fadeInText {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Botão surgindo de baixo */
+
+.splash__fade-up {
+    animation:
+        fadeUp 1.4s ease;
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Botão mais moderno */
+
+.splash__button {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Hover desktop */
+
+.splash__button:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Clique */
+
+.splash__button:active {
+    transform: scale(0.97);
+}
+
+
+/* Pulse leve contínuo */
+
+.splash__button {
+
+    animation:
+        pulseButton 2.5s infinite;
+}
+
+@keyframes pulseButton {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.03);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* =============================================================
+   ENTRADA DO MASCOTE
+   ============================================================= */
+
+.splash__circle--drop {
+
+    animation:
+        mascotDrop 1.8s cubic-bezier(0.22, 1, 0.36, 1),
+        glow 3s ease-in-out infinite 2s,
+        floatIdle 4s ease-in-out infinite 2s;
+}
+
+
+/* Mascote vindo de cima */
+
+@keyframes mascotDrop {
+
+    0% {
+        transform:
+            translateY(-120vh)
+            scale(0.6);
+
+        opacity: 0;
+    }
+
+    60% {
+        transform:
+            translateY(20px)
+            scale(1.05);
+
+        opacity: 1;
+    }
+
+    75% {
+        transform:
+            translateY(-10px)
+            scale(0.98);
+    }
+
+    90% {
+        transform:
+            translateY(5px)
+            scale(1.01);
+    }
+
+    100% {
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* Flutuação leve depois da entrada */
+
+@keyframes floatIdle {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+/* Glow suave */
+
+@keyframes glow {
+
+    0% {
+        box-shadow:
+            0 12px 40px rgba(0, 0, 0, 0.18);
+    }
+
+    50% {
+        box-shadow:
+            0 18px 55px rgba(255, 255, 255, 0.18);
+    }
+
+    100% {
+        box-shadow:
+            0 12px 40px rgba(0, 0, 0, 0.18);
+    }
+}
+
+.splash__text {
+    opacity: 0;
+    animation:
+        fadeInText 1s ease forwards;
+    animation-delay: 1.2s;
+}
+
+.splash__cta {
+    opacity: 0;
+    animation:
+        fadeUp 1s ease forwards;
+    animation-delay: 1.6s;
+}

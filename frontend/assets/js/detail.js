@@ -81,6 +81,30 @@ function renderizarMissao(missao) {
         'missao-tipo'
     ).textContent =
         missao.tipo
+
+    const barra =
+    document.getElementById(
+        'barra-progresso-fill'
+    )
+
+    const progresso =
+        document.getElementById(
+            'barra-progresso'
+        )
+
+    const porcentagem =
+        Math.min(
+            missao.xp,
+            100
+        )
+
+    barra.style.width =
+        `${porcentagem}%`
+
+    progresso.setAttribute(
+        'aria-valuenow',
+        porcentagem
+    )
 }
 
 document.addEventListener(
