@@ -3,11 +3,15 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "routes": [
-    { "src": "/index.html", "dest": "/index.html" },
-    { "src": "/js/(.*)", "dest": "/assets/js/$1" },
-    { "src": "/css/(.*)", "dest": "/assets/css/$1" },
-    { "src": "/images/(.*)", "dest": "/assets/images/$1" },
-    { "src": "/(.*)", "dest": "/pages/$1.html" },
-    { "handle": "filesystem" }
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/missions", "dest": "/pages/missions.html" },
+    { "src": "/detail", "dest": "/pages/detail.html" },
+    { "src": "/summary", "dest": "/pages/summary.html" },
+    { "src": "/trail", "dest": "/pages/trail.html" },
+    { "src": "/profile", "dest": "/pages/profile.html" },
+    { "src": "/wallet", "dest": "/pages/wallet.html" },
+    { "src": "/settings", "dest": "/pages/settings.html" },
+    { "src": "/(.*)", "dest": "/pages/$1.html" }
   ]
 }
