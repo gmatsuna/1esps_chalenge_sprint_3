@@ -29,6 +29,108 @@
                 <p>Selecione até 2 caminhos que você quer percorrer agora.</p>
             </header>
 
+            <div
+                id="loading-trilhas"
+                class="
+                    flex
+                    items-center
+                    justify-center
+                    py-24
+                    px-6
+                "
+            >
+
+                <div
+                    class="
+                        bg-white
+                        rounded-3xl
+                        shadow-2xl
+                        border
+                        border-emerald-100
+
+                        px-10
+                        py-12
+
+                        max-w-md
+                        w-full
+
+                        flex
+                        flex-col
+                        items-center
+                        gap-6
+                    "
+                >
+
+                    <!-- Spinner -->
+
+                    <div
+                        class="
+                            w-16
+                            h-16
+                            border-[5px]
+                            border-emerald-100
+                            border-t-emerald-500
+                            rounded-full
+                            animate-spin
+                        "
+                    ></div>
+
+                    <!-- Texto -->
+
+                    <div class="text-center">
+
+                        <h2
+                            class="
+                                text-2xl
+                                font-extrabold
+                                text-slate-800
+                                mb-3
+                            "
+                        >
+                            Carregando trilhas...
+                        </h2>
+
+                        <p
+                            class="
+                                text-slate-500
+                                leading-relaxed
+                                text-base
+                            "
+                        >
+                            O servidor está iniciando.<br>
+                            Isso pode levar alguns segundos.
+                        </p>
+
+                    </div>
+
+                    <!-- Barra animada -->
+
+                    <div
+                        class="
+                            w-full
+                            h-2
+                            bg-slate-100
+                            rounded-full
+                            overflow-hidden
+                        "
+                    >
+
+                        <div
+                            class="
+                                h-full
+                                w-1/2
+                                bg-emerald-500
+                                rounded-full
+                                loading-bar
+                            "
+                        ></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
             <form action="./summary.html" method="get" novalidate>
                 <fieldset class="trail__list" id="trail-list"></fieldset>
 

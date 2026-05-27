@@ -1,7 +1,9 @@
 async function carregarTrilhas() {
+    const loading = document.getElementById('loading-trilhas');
     try {
         const response = await fetch(`${API_BASE_URL}/trilhas`);
         const trilhas = await response.json();
+        loading.style.display = 'none'
         const container = document.getElementById('trail-list');
 
         container.innerHTML = '';
@@ -42,6 +44,29 @@ async function carregarTrilhas() {
 
     } catch (error) {
         console.error('Erro ao carregar trilhas:', error);
+        loading.innerHTML = `
+
+            <div class="
+                text-center
+            ">
+
+                <h2 class="
+                    text-red-500
+                    text-2xl
+                    font-bold
+                    mb-3
+                ">
+                    Erro ao carregar
+                </h2>
+
+                <p class="
+                    text-slate-500
+                ">
+                    O servidor pode estar indisponível.
+                </p>
+
+            </div>
+        `
     }
     
 }

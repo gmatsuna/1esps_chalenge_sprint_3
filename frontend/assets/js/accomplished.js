@@ -38,7 +38,56 @@ function carregarConclusao() {
         `${dados.streak} Dias se cuidando`
 }
 
+function dispararConfetti() {
+
+    confetti({
+
+        particleCount: 150,
+
+        spread: 100,
+
+        origin: {
+            y: 0.6
+        }
+    })
+
+    setTimeout(() => {
+
+        confetti({
+
+            particleCount: 100,
+
+            angle: 60,
+
+            spread: 80,
+
+            origin: {
+                x: 0
+            }
+        })
+
+        confetti({
+
+            particleCount: 100,
+
+            angle: 120,
+
+            spread: 80,
+
+            origin: {
+                x: 1
+            }
+        })
+
+    }, 400)
+}
+
 document.addEventListener(
     'DOMContentLoaded',
-    carregarConclusao
+    () => {
+
+        carregarConclusao()
+
+        dispararConfetti()
+    }
 )

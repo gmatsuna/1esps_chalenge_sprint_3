@@ -136,3 +136,148 @@
     text-decoration: underline;
     padding: 0.5rem;
 }
+
+
+/* =============================================================
+   ANIMAÇÕES DE CELEBRAÇÃO
+   ============================================================= */
+
+/* Entrada suave da página */
+
+.accomplished {
+    animation: fadePage 0.8s ease;
+}
+
+@keyframes fadePage {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Mascote pulando */
+
+.accomplished__mascot {
+
+    animation:
+        mascotJump 1.2s ease,
+        mascotFloat 3s ease-in-out infinite 1.2s;
+}
+
+
+/* Imagem do mascote */
+
+.accomplished__mascot-image {
+
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+
+    .accomplished__mascot-image {
+
+        width: 160px;
+        height: 160px;
+    }
+}
+
+
+/* Pulo inicial */
+
+@keyframes mascotJump {
+
+    0% {
+        transform:
+            translateY(120px)
+            scale(0.8);
+
+        opacity: 0;
+    }
+
+    40% {
+        transform:
+            translateY(-30px)
+            scale(1.05);
+
+        opacity: 1;
+    }
+
+    60% {
+        transform:
+            translateY(10px)
+            scale(0.98);
+    }
+
+    80% {
+        transform:
+            translateY(-8px)
+            scale(1.02);
+    }
+
+    100% {
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* Flutuação contínua */
+
+@keyframes mascotFloat {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+/* Cards surgindo */
+
+.accomplished__report-row {
+
+    opacity: 0;
+
+    animation:
+        fadeUpCard 0.8s ease forwards;
+}
+
+.accomplished__report-row:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.accomplished__report-row:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.accomplished__report-row:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+@keyframes fadeUpCard {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CareQuest – Favoritos</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-slate-100 min-h-screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <div class="max-w-5xl mx-auto p-6">
+    <link href="https://cdn.lineicons.com/5.1/line/lineicons.css" rel="stylesheet">
+</head>
+<body class="bg-slate-100 min-h-screen pb-28 flex justify-center">
+
+    <div class="max-w-[640px] mx-auto px-4 py-6 pb-28">
 
         <header class="mb-8">
 
@@ -48,7 +50,6 @@
                     grid
                     grid-cols-1
                     md:grid-cols-2
-                    lg:grid-cols-3
                     gap-6
                 "
             ></div>
@@ -108,22 +109,63 @@
 
             </div>
 
-            <div
-                id="modal-missoes"
-                class="
-                    grid
-                    md:grid-cols-2
-                    gap-4
-                "
-            >
-            </div>
+            <div id="modal-missoes" class="grid md:grid-cols-2 gap-4"></div>
 
         </div>
 
     </div>
 
+    <nav
+        class="
+            fixed
+            bottom-0
+            left-1/2
+            -translate-x-1/2
+
+            w-full
+            max-w-[640px]
+
+            bg-white
+            border-t
+            border-slate-200
+
+            flex
+            justify-around
+            items-center
+
+            py-3
+            px-4
+
+            z-50
+        "
+        aria-label="Navegação principal"
+    >
+
+        <a href="./missions.html" class=" flex flex-col items-center gap-1 text-slate-500 hover:text-emerald-500 transition">
+            <i class="lni lni-home-2 text-xl"></i>
+            <span class="text-xs font-medium">Início</span>
+        </a>
+
+        <a href="./wallet.html" class="flex flex-col items-center gap-1 text-slate-500 hover:text-emerald-500 transition">
+            <i class="lni lni-wallet-1 text-xl"></i>
+            <span class="text-xs font-medium">Carteira</span>
+        </a>
+
+        <a href="./favorites.html" aria-current="page" class=" flex flex-col items-center gap-1 text-emerald-500 font-semibold">
+            <i class="fa-solid fa-heart text-xl"></i>
+            <span class="text-xs">Favoritos</span>
+        </a>
+
+        <a href="./profile.html" class=" flex flex-col items-center gap-1 text-slate-500 hover:text-emerald-500 transition">
+            <i class="lni lni-user-4 text-xl"></i>
+            <span class="text-xs font-medium">Perfil</span>
+        </a>
+
+    </nav>
+
     <script src="../assets/js/config.js"></script>
     <script src="../assets/js/favorites.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
 </body>
 </html>

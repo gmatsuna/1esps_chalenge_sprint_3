@@ -1,238 +1,6 @@
-/* =============================================================
-   Splash (index.html) – tela inicial verde com mascote.
-   ============================================================= */
-
-@import url("./main.css");
-
-.splash {
-    background-color: var(--color-primary);
-    color: var(--color-text-on-primary);
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem 1.5rem;
-    gap: 2.5rem;
-    min-height: 100vh;
-    text-align: center;
-}
-
-@media (min-width: 768px) {
-    .splash {
-        padding: 4rem 3rem;
-        gap: 3rem;
-    }
-}
-
-.splash__circle {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: var(--color-primary-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
-    flex-shrink: 0;
-}
-
-@media (min-width: 768px) {
-    .splash__circle {
-        width: 240px;
-        height: 240px;
-    }
-}
-
-.splash__circle img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-}
-
-@media (min-width: 768px) {
-    .splash__circle img { width: 168px; height: 168px; }
-}
-
-.splash__text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    max-width: 480px;
-}
-
-.splash__text h1 {
-    font-size: var(--fs-2xl);
-    font-weight: 700;
-    line-height: 1.1;
-}
-
-@media (min-width: 768px) {
-    .splash__text h1 { font-size: 2.5rem; }
-}
-
-.splash__text .brand-by {
-    font-size: var(--fs-md);
-    font-weight: 500;
-    opacity: 0.9;
-    letter-spacing: 1.5px;
-}
-
-.splash__tagline {
-    font-size: var(--fs-lg);
-    font-weight: 400;
-    margin-top: 0.25rem;
-    opacity: 0.95;
-}
-
-.splash__cta {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 1rem;
-}
-
-
-/* =============================================================
+/* =========================================================
    ANIMAÇÕES
-   ============================================================= */
-
-/* Entrada suave da página */
-
-.splash {
-    animation: fadePage 1s ease;
-}
-
-@keyframes fadePage {
-
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-
-/* Glow pulsando */
-
-@keyframes glow {
-
-    0% {
-        box-shadow:
-            0 12px 40px rgba(0, 0, 0, 0.18);
-    }
-
-    50% {
-        box-shadow:
-            0 16px 50px rgba(255, 255, 255, 0.22);
-    }
-
-    100% {
-        box-shadow:
-            0 12px 40px rgba(0, 0, 0, 0.18);
-    }
-}
-
-
-/* Fade-in do texto */
-
-.splash__fade-in {
-    animation:
-        fadeInText 1.2s ease;
-}
-
-@keyframes fadeInText {
-
-    from {
-        opacity: 0;
-        transform: translateY(12px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/* Botão surgindo de baixo */
-
-.splash__fade-up {
-    animation:
-        fadeUp 1.4s ease;
-}
-
-@keyframes fadeUp {
-
-    from {
-        opacity: 0;
-        transform: translateY(24px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/* Botão mais moderno */
-
-.splash__button {
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-
-/* Hover desktop */
-
-.splash__button:hover {
-
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.18);
-}
-
-
-/* Clique */
-
-.splash__button:active {
-    transform: scale(0.97);
-}
-
-
-/* Pulse leve contínuo */
-
-.splash__button {
-
-    animation:
-        pulseButton 2.5s infinite;
-}
-
-@keyframes pulseButton {
-
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.03);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-
-/* =============================================================
-   ENTRADA DO MASCOTE
-   ============================================================= */
+========================================================= */
 
 .splash__circle--drop {
 
@@ -248,6 +16,7 @@
 @keyframes mascotDrop {
 
     0% {
+
         transform:
             translateY(-120vh)
             scale(0.6);
@@ -256,6 +25,7 @@
     }
 
     60% {
+
         transform:
             translateY(20px)
             scale(1.05);
@@ -264,18 +34,21 @@
     }
 
     75% {
+
         transform:
             translateY(-10px)
             scale(0.98);
     }
 
     90% {
+
         transform:
             translateY(5px)
             scale(1.01);
     }
 
     100% {
+
         transform:
             translateY(0)
             scale(1);
@@ -283,12 +56,12 @@
 }
 
 
-/* Flutuação leve depois da entrada */
+/* Flutuação */
 
 @keyframes floatIdle {
 
     0% {
-        transform: translateY(0px);
+        transform: translateY(0);
     }
 
     50% {
@@ -296,41 +69,128 @@
     }
 
     100% {
-        transform: translateY(0px);
+        transform: translateY(0);
     }
 }
 
 
-/* Glow suave */
+/* Glow */
 
 @keyframes glow {
 
     0% {
+
         box-shadow:
             0 12px 40px rgba(0, 0, 0, 0.18);
     }
 
     50% {
+
         box-shadow:
-            0 18px 55px rgba(255, 255, 255, 0.18);
+            0 18px 55px rgba(255, 255, 255, 0.22);
     }
 
     100% {
+
         box-shadow:
             0 12px 40px rgba(0, 0, 0, 0.18);
     }
 }
 
-.splash__text {
+
+/* Texto */
+
+.splash__fade-in {
+
     opacity: 0;
+
     animation:
         fadeInText 1s ease forwards;
+
     animation-delay: 1.2s;
 }
 
-.splash__cta {
+
+@keyframes fadeInText {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(12px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* CTA */
+
+.splash__fade-up {
+
     opacity: 0;
+
     animation:
         fadeUp 1s ease forwards;
+
     animation-delay: 1.6s;
+}
+
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(24px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* Botão */
+
+.splash__button {
+
+    animation:
+        pulseButton 2.5s infinite;
+}
+
+
+.splash__button:active {
+
+    transform:
+        scale(0.97);
+}
+
+
+@keyframes pulseButton {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.03);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }

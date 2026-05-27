@@ -1,64 +1,217 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CareQuest – jornada gamificada do cuidado contínuo da Care Plus.">
-    <meta name="theme-color" content="#1C9770">
+
+    <meta charset="UTF-8" />
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    />
+
+    <meta
+        name="description"
+        content="CareQuest – jornada gamificada do cuidado contínuo da Care Plus."
+    />
+
+    <meta
+        name="theme-color"
+        content="#1C9770"
+    />
+
     <title>CareQuest – Início</title>
 
-    <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-          crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Estilos do projeto -->
-    <link rel="stylesheet" href="./assets/css/home.css">
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- CSS das animações -->
+    <link
+        rel="stylesheet"
+        href="./assets/css/home.css"
+    />
+
 </head>
-<body>
-    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
 
-    <div class="app-shell">
-        <main id="main-content" class="splash d-flex flex-column">
+<body class="overflow-hidden">
 
-            <header class="splash__circle splash__circle--drop">
-    <img
-        src="./assets/images/mascote.png"
-        alt="Mascote do CareQuest, um personagem amigável."
+    <a
+        href="#main-content"
+        class="
+            sr-only
+            focus:not-sr-only
+            focus:absolute
+            focus:top-4
+            focus:left-4
+            bg-white
+            text-emerald-700
+            px-4
+            py-2
+            rounded-xl
+            z-50
+        "
     >
+        Pular para o conteúdo
+    </a>
+
+    <div
+        class="
+            min-h-screen
+            bg-emerald-600
+            flex
+            items-center
+            justify-center
+            px-6
+        "
+    >
+
+        <main
+            id="main-content"
+            class="
+                flex
+                flex-col
+                items-center
+                text-center
+                gap-10
+                w-full
+                max-w-xl
+            "
+        >
+
+            <!-- Mascote -->
+
+            <header
+                class="
+                    splash__circle--drop
+                    w-52
+                    h-52
+                    md:w-64
+                    md:h-64
+                    rounded-full
+                    bg-emerald-400
+                    flex
+                    items-center
+                    justify-center
+                    shadow-2xl
+                "
+            >
+
+                <img
+                    src="./assets/images/mascote.png"
+                    alt="Mascote do CareQuest"
+                    class="
+                        w-36
+                        h-36
+                        md:w-44
+                        md:h-44
+                        rounded-full
+                        object-cover
+                    "
+                />
+
             </header>
 
-            <section class="splash__text splash__fade-in">
-                <h1>CareQuest</h1>
+            <!-- Texto -->
 
-                <span class="brand-by">
+            <section
+                class="
+                    splash__fade-in
+                    flex
+                    flex-col
+                    items-center
+                    gap-4
+                "
+            >
+
+                <h1
+                    class="
+                        text-5xl
+                        md:text-6xl
+                        font-bold
+                        text-white
+                        tracking-tight
+                    "
+                >
+                    CareQuest
+                </h1>
+
+                <span
+                    class="
+                        text-white/90
+                        tracking-[3px]
+                        uppercase
+                        font-semibold
+                        text-lg
+                    "
+                >
                     by CARE PLUS
                 </span>
 
-                <p class="splash__tagline">
+                <p
+                    class="
+                        text-white/95
+                        text-lg
+                        md:text-xl
+                        leading-relaxed
+                        max-w-md
+                    "
+                >
                     Jornada gamificada do cuidado contínuo.
                 </p>
+
             </section>
 
+            <!-- CTA -->
+
             <nav
-                class="splash__cta splash__fade-up"
                 aria-label="Ação principal"
+                class="
+                    splash__fade-up
+                    w-full
+                    flex
+                    justify-center
+                "
             >
+
                 <a
-                    class="btn-primary-cta btn-primary-cta--inverse splash__button"
                     href="./pages/welcome.html"
+                    class="
+                        splash__button
+
+                        w-full
+                        max-w-md
+
+                        bg-white
+                        text-emerald-600
+
+                        font-bold
+                        text-2xl
+
+                        py-5
+                        rounded-3xl
+
+                        shadow-xl
+
+                        transition
+                        duration-300
+
+                        hover:scale-105
+                        hover:shadow-2xl
+                    "
                 >
                     Começar
                 </a>
+
             </nav>
+
         </main>
+
     </div>
 
-    <!-- Bootstrap 5 JS bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"></script>
 </body>
 </html>
