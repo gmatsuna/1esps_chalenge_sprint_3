@@ -172,7 +172,7 @@ backend/data/favorites.json
 ## 1. Clonar o repositório
 
 ```bash
-git clone <https://github.com/gmatsuna/1esps_chalenge_sprint_3.git>
+git clone https://github.com/gmatsuna/1esps_chalenge_sprint_3.git
 ```
 
 ---
